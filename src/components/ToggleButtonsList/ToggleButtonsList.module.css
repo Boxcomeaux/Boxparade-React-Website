@@ -1,0 +1,46 @@
+.toggleButtons{
+    display:flex;
+    position:relative;
+    flex-direction:row;
+    flex-wrap:wrap;
+    left:0;
+    right:0;
+    margin:0 auto 0 auto;
+}
+.title{
+    display:block;
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-size:35px;
+    flex:1 0 90%;
+}
+/***LIGHT MODE***/
+.chartButtonsLight > button:before{
+    background-color:#ff42f9;
+}
+.frameworkButtonsLight > button:nth-of-type(1):before{
+    background-color:#ffd426;
+}
+.frameworkButtonsLight > button:nth-of-type(2):before{
+    background-color:#08bbed;
+}
+.frameworkButtonsLight > button:nth-of-type(3):before{
+    background-color:#dc0030;
+}
+/***DARK MODE***/
+.chartButtonsDark > button:before{
+    background-color:#da23e8;
+}
+.chartButtonsDark > button, .frameworkButtonsDark > button{
+    background-color:#787878;
+}
+.frameworkButtonsDark > button:nth-of-type(1):before{
+    background-color:#f0bf20;
+}
+.frameworkButtonsDark > button:nth-of-type(2):before{
+    background-color:#05a5d1;
+}
+.frameworkButtonsDark > button:nth-of-type(3):before{
+    background-color:#c4002b;
+}
+

@@ -1,0 +1,36 @@
+*{
+  margin:0;
+  padding:0;
+}
+@font-face {
+  font-family: "Simply Square JL";
+  src: url("Fonts/SimplySquareJL.ttf") format("truetype");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("Fonts/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: TitilliumWebLight;
+  src: url("Fonts/TitilliumWeb-Light.ttf") format("truetype");
+}
+main{
+  display:flex;
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  overflow-x:hidden;
+  flex-direction: column;
+}
+.gWidth{
+  width:1400px;
+  max-width:92%;
+}
+a{
+  color:#67d9f0;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}

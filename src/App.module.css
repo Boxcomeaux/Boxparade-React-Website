@@ -1,0 +1,19 @@
+.appBody{
+    display:block;
+    position:relative;
+    flex:0 0 auto;
+    background-color:#fff;
+    transition:background-color 2s ease;
+}
+.appBody-Dark{
+    background-color:#202020;
+}
+.appBody-Dark > div > h2{
+    color:#fff;
+}
+.appBody-Dark > section > div > h2{
+    color:#fff;
+}
+.blur{
+    filter: blur(3.46px);
+}

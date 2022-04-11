@@ -1,0 +1,36 @@
+.gold{
+    color:rgb(255,214,68);
+}
+.orange{
+    color:#f87217;
+}
+.highlight{
+    color:#ff42f9;
+}
+.text{
+    color:rgba(115,198,160,1);
+}
+.num{
+    color:#65a0f2;
+}
+.indent1{
+    text-indent: 5%;
+}
+.indent2{
+    text-indent: 10%;
+}
+.indent2Block{
+    text-indent: 10%;
+}
+.indent3{
+    display:block;
+    text-indent: 15%;
+}
+.plain{
+    color:#787878;
+}
+.newLine{
+    display:block;
+    position:relative;
+    width:100%;
+}

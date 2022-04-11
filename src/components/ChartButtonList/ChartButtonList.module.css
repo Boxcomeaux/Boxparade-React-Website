@@ -1,0 +1,115 @@
+@keyframes rollIn{
+    0%{
+        transform:scale(0.7) rotate(-30deg) translate(-300px, 0);
+    }
+    90%{
+        transform:scale(1) rotate(-30deg)translate(0, 0);
+    }
+    100%{
+        transform:scale(1) rotate(0deg)translate(0, 0);
+    }
+}
+.chartToggleContainer{
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    left:0;
+    flex-wrap:wrap;
+    right:0;
+    max-width:92%;
+    margin:0 auto 0 auto;
+    padding:30px 0 10px 0;
+    z-index:0;
+    overflow:hidden;
+}
+.chartToggleContainer-Dark > button{
+    background-color:#787878 !important;
+}
+.chartToggleContainer-Dark > button:not(:last-of-type):hover{
+    background-color:#ddd !important;
+}
+.chartToggleContainer > button{
+    display:block;
+    position:relative;
+    flex:0 0 auto;
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    border:none;
+    margin-right:15px;
+    transform-origin: top center;
+    cursor:pointer;
+    background-color:#f1f1f1;
+    overflow:hidden;
+    transform:scale(0.7) rotate(-30deg) translate(-300px, 0);
+    transition:all 200ms ease;
+}
+.chartToggleContainer > button:first-of-type{
+    animation:rollIn 300ms ease 0ms 1 forwards;
+}
+.chartToggleContainer > button:nth-of-type(2){
+    animation:rollIn 300ms ease 100ms 1 forwards;
+}
+.chartToggleContainer > button:nth-of-type(3){
+    animation:rollIn 300ms ease 200ms 1 forwards;
+}
+.chartToggleContainer > button:nth-of-type(4){
+    animation:rollIn 300ms ease 300ms 1 forwards;
+}
+.chartToggleContainer > button:nth-of-type(5){
+    animation:rollIn 300ms ease 400ms 1 forwards;
+}
+.chartToggleContainer > button > svg{
+    display:block;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    z-index:5;
+}
+.chartToggleContainer > button:hover{
+    background-color:#e8e8e8;
+}
+.chartToggleContainer > button:before{
+    content:'';
+    display:block;
+    position:absolute;
+    border-radius:30px;
+    width:100%;
+    height:100%;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    opacity:0.8;
+    margin:auto;
+    transform:scale(0);
+    z-index:1;
+    background-color:#ff42f9;
+}
+.docBtn{
+    display:block;
+    position:absolute !important;
+    right:0;
+    animation: rollIn 300ms ease 400ms 1 forwards !important;
+}
+.docBtn:hover{
+    background-color:#ff42f9 !important;
+}
+.docBtn:hover > svg > path{
+    fill:#fff;
+}
+@media only screen and (max-width:510px) {
+    .docBtn{
+        position:relative !important;
+        right:auto !important;
+    }
+    .chartToggleContainer{
+        padding:15px 0 10px 0
+    }
+    .chartToggleContainer > button{
+        margin-top:15px;
+    }
+}

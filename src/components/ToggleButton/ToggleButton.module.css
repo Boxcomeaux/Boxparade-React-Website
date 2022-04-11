@@ -1,0 +1,98 @@
+@keyframes slideAndShow{
+    0%{
+        transform: translate(-40px, 0);
+        opacity:0;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity:1;
+    }
+}
+.fwButton{
+    display:inline-block;
+    position:relative;
+    border:none;
+    width:184px;
+    height:60px;
+    flex:0 0 auto;
+    margin-right:10px;
+    background-color: #f1f1f1;
+    cursor:pointer;
+    overflow:hidden;
+    transform: translate(-20px, 0);
+    opacity:0;
+    margin-bottom: 10px;
+    transition:all 200ms ease;
+}
+.fwButton:before{
+    content:'';
+    display:block;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:101%;
+    left:0;
+    z-index:2;
+    transition: all 500ms ease 100ms;
+}
+.fwButton:nth-of-type(1){
+    animation:slideAndShow 300ms ease 0ms 1 forwards;
+}
+.fwButton:nth-of-type(2){
+    animation:slideAndShow 300ms ease 100ms 1 forwards;
+}
+.fwButton:nth-of-type(3){
+    animation:slideAndShow 300ms ease 200ms 1 forwards;
+}
+.fwButton:nth-of-type(4){
+    animation:slideAndShow 300ms ease 300ms 1 forwards;
+}
+.fwButton:nth-of-type(5){
+    animation:slideAndShow 300ms ease 400ms 1 forwards;
+}
+.fwButton:hover{
+    background-color: #e8e8e8;
+}
+.fwButton > svg{
+    display:block;
+    position:absolute;
+    left:10px;
+    bottom:-100%;
+    width:40px;
+    height:40px;
+    z-index:5;
+    transition:all 300ms ease 0ms;
+}
+.fwButton > span{
+    display:block;
+    position:absolute;
+    font-family: Poppins, sans-serif;
+    font-size:20px;
+    color:#242424;
+    z-index:5;
+    letter-spacing: 0.2px;
+    font-weight:700;
+    bottom:5px;
+    right:8px;
+    transition:color 600ms ease;
+}
+
+.active:before{
+    top:0;
+}
+.active > span{
+    color:#fff;
+}
+.active > svg{
+    bottom:8px;
+}
+@media only screen and (max-width:450px) {
+    .fwButton{
+        flex:1 0 35%;
+    }
+}
+@media only screen and (max-width:400px) {
+    .fwButton{
+        flex:1 0 85%;
+    }
+}

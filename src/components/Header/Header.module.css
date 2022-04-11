@@ -1,0 +1,186 @@
+@keyframes grow{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes shrink{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform:scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes moveUp{
+    0%{
+        transform:translate(0, 40px);
+    }
+    100%{
+        transform:translate(0, 0);
+    }
+}
+@keyframes moveDown{
+    0%{
+        transform:translate(0, -40px);
+    }
+    100%{
+        transform:translate(0, 0);
+    }
+}
+.header{
+    display:block;
+    position:absolute;
+    flex: 0 0 auto;
+    width: 100%;
+    z-index:100;
+    background:transparent;
+    margin:30px 0 30px 0;
+}
+.header > div{
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto 0 auto;
+}
+.header > div > div{
+    display:flex;
+    position:relative;
+    flex-direction:row;
+}
+.header > div > div:first-of-type{
+    flex:0 0 auto;
+}
+.header > div > div:first-of-type > div:first-of-type{
+    display:block;
+    position:relative;
+    flex:0 0 60px;
+    width:1%;
+}
+.header > div > div:first-of-type > div:first-of-type > img{
+    display:block;
+    position:relative;
+    width:39px;
+    height:auto;
+    margin:0 auto 0 auto;
+    left:0;
+    right:0
+}
+.header > div > div:first-of-type > div:nth-of-type(2) > h1, .header > div > div:first-of-type > div:nth-of-type(2) > span{
+    font-family:'Simply Square JL', sans-serif;
+    letter-spacing: 0.5px;
+    color:#fff;
+    cursor:default;
+}
+.header > div > div:first-of-type > div:nth-of-type(2) > span{
+    line-height:16px;
+}
+.header > div > div:first-of-type > div:nth-of-type(2) > span:nth-of-type(2){
+
+}
+.header > div > div:first-of-type > div:nth-of-type(2) > span > strong{
+    font-size:18px;
+}
+.header > div > div:first-of-type > div:nth-of-type(2) > h1{
+    font-size:35px;
+    line-height:30px;
+}
+.header > div > div:nth-of-type(2){
+    flex-direction: row-reverse;
+    flex:1 0 1%;
+}
+.header > div > div:nth-of-type(2) > button:first-of-type{
+    display:block;
+    position:relative;
+    border-radius:30px;
+    height:60px;
+    width:60px;
+    background-color: transparent;
+    cursor: pointer;
+    border:none;
+    transition: background-color 200ms ease;
+}
+.header > div > div:nth-of-type(2) > button:first-of-type > svg{
+    display:block;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    transition: transform 500ms ease;
+}
+.header > div > div:nth-of-type(2) > button:first-of-type:hover > svg{
+    transform:rotate(80deg);
+}
+.header > div > div:nth-of-type(2) > button:first-of-type:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.settingsContainer{
+    display:block;
+    position:absolute;
+    width:165px;
+    right:0;
+    top:100%;
+    padding:4px 4px;
+    box-sizing: border-box;
+    z-index:300;
+    box-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.15);
+    border-radius:5px;
+    background-color:#fff;
+    transform:scale(0.8);
+    overflow:hidden;
+    transition: all 500ms ease;
+}
+.settingsBtn{
+    display:block;
+    position:relative;
+    width:100%;
+    right:0;
+    border:none;
+    padding:8px 10px;
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius:5px;
+    text-align: left;
+    background-color:#fff;
+}
+.settingsView{
+    animation: grow 200ms ease 0ms 1 forwards;
+}
+.settingsViewHide{
+    animation: shrink 200ms ease 0ms 1 forwards;
+}
+.Moon{
+    animation: moveUp 200ms ease 0ms 1 forwards;
+}
+.Light{
+    animation: moveDown 200ms ease 0ms 1 forwards;
+}
+.settingsBtn:hover{
+    background-color:rgba(255, 66, 249, 0.1);
+}
+.settingsBtn > span{
+    font-size:16px;
+    padding-left:25px;
+    font-family: 'Poppins', sans-serif;
+}
+.settingsBtn > span > svg{
+    display: inline-block;
+    position: absolute;
+    vertical-align: top;
+    margin-right:2px;
+    left:10px;
+}
+.settingsBtn > span > svg:first-of-type{
+    transform:translate(0, -40px);
+}
+.settingsBtn > span > svg:last-of-type{
+    transform:translate(0, 40px);
+}
