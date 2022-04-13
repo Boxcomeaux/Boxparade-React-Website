@@ -14,7 +14,7 @@ const Glossary: React.FC<{mode:boolean}> = (props) => {
             clearTimeout(glossTimer);
             glossTimer = setTimeout(() => {
                 collapseDock();
-            },500);
+            },550);
         }
     };
     const collapseDock = () => {

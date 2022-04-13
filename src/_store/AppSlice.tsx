@@ -145,7 +145,7 @@ const pieJsonObj = {
     textsize: '1',
     chartSize: '2',
     ringsize: 55,
-    offset: 15,
+    offset: 10,
     strokewidth: '1',
     strokecolor: '#444',
     labeltextcolor: '#545454',
@@ -313,7 +313,7 @@ const chartSetting = (state: AppGlobals, action: { payload: any; type?: string; 
         state.pieJsonObj.chartSize = '3';
         state.pieJsonObj.title = 'Test 3D-Bar Chart';
         state.pieJsonObj.colors = colors5;
-        state.pieJsonObj.offset = 15;
+        state.pieJsonObj.offset = 10;
         state.pieJsonObj.names = names5;
         state.chartWidth = '';
     } else if(action.payload === 3 && state.typeIndex === 1){
@@ -324,7 +324,7 @@ const chartSetting = (state: AppGlobals, action: { payload: any; type?: string; 
         state.pieJsonObj.data = barComparativeData;
         state.pieJsonObj.chartSize = '3';
         state.pieJsonObj.names = names2;
-        state.pieJsonObj.offset = 15;
+        state.pieJsonObj.offset = 10;
         state.pieJsonObj.colors = colors2;
         state.chartWidth = '';
     }else if(action.payload === 0 && state.typeIndex === 2){
@@ -336,7 +336,12 @@ const chartSetting = (state: AppGlobals, action: { payload: any; type?: string; 
         state.pieJsonObj.chartSize = '3';
         state.pieJsonObj.colors = colors3;
         state.pieJsonObj.names = names7;
-        state.pieJsonObj.offset = 15;
+        if(!state.colorMode){
+            state.pieJsonObj.strokecolor = "#181818";
+        }else{
+            state.pieJsonObj.strokecolor = "#fff";
+        }
+        state.pieJsonObj.offset = 10;
         state.chartWidth = '';
     }else if(action.payload === 1 && state.typeIndex === 2){
         state.pieJsonObj.type = 'LINE';
@@ -346,7 +351,12 @@ const chartSetting = (state: AppGlobals, action: { payload: any; type?: string; 
         state.pieJsonObj.chartSize = '3';
         state.pieJsonObj.id = 'demo10';
         state.pieJsonObj.colors = colors3;
-        state.pieJsonObj.offset = 15;
+        if(!state.colorMode){
+            state.pieJsonObj.strokecolor = "#181818";
+        }else{
+            state.pieJsonObj.strokecolor = "#fff";
+        }
+        state.pieJsonObj.offset = 10;
         state.pieJsonObj.names = names7;
         state.chartWidth = '';
     }else if(action.payload === 0 && state.typeIndex === 3){

@@ -5,6 +5,7 @@ import Modal from '../Modal/Modal';
 import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
 import {appActions} from "../../_store/AppSlice";
 
+let timer: NodeJS.Timeout;
 const Header = () => {
     const [showSettings, setShowSettings] = useState(false);
     const [settingsAnim, setSettingsAnim] = useState(false);
@@ -15,16 +16,13 @@ const Header = () => {
         setShowSettings(true);
         setSettingsAnim(true);
     };
-    const modeHandler = () => {
-        dispatch(appActions.toggleMode());
+    const modeHandler = (toggle: boolean) => {
+        clearTimeout(timer);
+        if(toggle){
+            dispatch(appActions.toggleMode());
+        }
         setSettingsAnim(false);
-        setTimeout(() => {
-            setShowSettings(false);
-        },500);
-    };
-    const cancelHandler = () => {
-        setSettingsAnim(false);
-        setTimeout(() => {
+        timer = setTimeout(() => {
             setShowSettings(false);
         },500);
     };
@@ -33,7 +31,7 @@ const Header = () => {
         <header className={_c.header}>
             <div className="gWidth">
                 <div>
-                    <div><img src={Bxp_Logo} alt="BOXPARADE_LOGO"/></div>
+                    <div><img className="delayedBounce" src={Bxp_Logo} alt="BOXPARADE_LOGO"/></div>
                     <div>
                         <h1>BOXPARADE</h1>
                         <span>GRAPH<strong>X</strong> <span>|</span><span> BETA</span></span>
@@ -49,7 +47,7 @@ const Header = () => {
                         </svg>
                     </button>
                     {showSettings && <div className={`${_c.settingsContainer} ${settingsAnim ? _c.settingsView : _c.settingsViewHide}`}>
-                        <button className={`${_c.settingsBtn} ${showSettings ? _c.settingsView : ''}`} onClick={modeHandler}>
+                        <button className={`${_c.settingsBtn} ${showSettings ? _c.settingsView : ''}`} onClick={() => {modeHandler(true)}}>
                         <span>
                             <svg className={colorMode ? _c.Moon : ''} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                                  fill="#000000">
@@ -62,7 +60,7 @@ const Header = () => {
                         </button>
                     </div>
                     }
-                    {showSettings && <Modal onToggle={cancelHandler} mode={"NONE"}/>}
+                    {showSettings && <Modal onToggle={() => {modeHandler(false)}} mode={"NONE"}/>}
                 </div>
             </div>
         </header>

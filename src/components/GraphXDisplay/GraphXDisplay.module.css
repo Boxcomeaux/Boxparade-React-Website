@@ -16,65 +16,6 @@
         opacity:1;
     }
 }
-@keyframes delayedBounce{
-    0%{
-        transform:translate(0, 0) rotate(0deg);
-    }
-    10%{
-        transform:translate(0, 0) rotate(0deg);
-    }
-    11.25%{
-        transform:translate(0, -5px) rotate(0deg);
-    }
-    13.75%{
-        transform:translate(0, -5px) rotate(90deg);
-    }
-    14.25%{
-        transform:translate(0, 0) rotate(90deg);
-    }
-    25%{
-        transform:translate(0, 0)rotate(90deg);
-    }
-
-    26.25%{
-        transform:translate(0, -5px) rotate(90deg);
-    }
-    28.75%{
-        transform:translate(0, -5px) rotate(180deg);
-    }
-    29.25%{
-        transform:translate(0, 0) rotate(180deg);
-    }
-    58%{
-        transform:translate(0, 0)rotate(180deg);
-    }
-
-    68%{
-        transform:translate(0, -5px) rotate(180deg);
-    }
-    71%{
-        transform:translate(0, -5px) rotate(270deg);
-    }
-    74%{
-        transform:translate(0, 0) rotate(270deg);
-    }
-    84%{
-        transform:translate(0, 0)rotate(270deg);
-    }
-
-    86.25%{
-        transform:translate(0, -5px) rotate(270deg);
-    }
-    88.75%{
-        transform:translate(0, -5px) rotate(360deg);
-    }
-    90%{
-        transform:translate(0, 0) rotate(360deg);
-    }
-    100%{
-        transform:translate(0, 0)rotate(360deg);
-    }
-}
 .demo{
     display:block;
     position:relative;
@@ -122,6 +63,12 @@
     position:relative;
     flex:1 0 25%;
     width:1%;
+}
+.GraphXDisplayContainer > div:nth-of-type(2) > div{
+    display:block;
+    position:relative;
+    width:auto;
+    height:auto;
 }
 .implementation{
     flex:1 0 90%;
@@ -214,7 +161,6 @@
     right:0;
     width:24px;
     margin:0 auto 0 auto;
-    animation:delayedBounce 20s ease 0ms infinite forwards;
 }
 .implementation > div:nth-of-type(2){
     display:block;

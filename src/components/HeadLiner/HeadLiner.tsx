@@ -9,7 +9,7 @@ const HeadLiner: React.FC<{mode: boolean}> = (props) => {
             <div className={`gWidth`}>
                 <div>
                     <h1>Learn Boxology</h1>
-                    <p>Welcome to Boxparade&copy;GraphX, where you will learn Boxology! Yes I know you're probably wondering, "What does Boxology mean?". Well it's not a real word, but it's fun and it means the study of Boxparade technology. Ooooo cool, eh? GraphX is a graph visualization tool for displaying a more intuitive way of analyzing data.</p>
+                    <p>Welcome to Boxparade&copy;GraphX, where you will learn Boxology! Yes I know you're probably wondering, "What does Boxology mean?". Well it's not a real word, but it's fun and it means the study of Boxparade. GraphX is a graph visualization tool for displaying a more intuitive way of analyzing data.</p>
                 </div>
                 <BxpModel/>
             </div>

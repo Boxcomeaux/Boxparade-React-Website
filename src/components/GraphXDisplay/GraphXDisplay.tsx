@@ -1,7 +1,7 @@
 import _c from "./GraphXDisplay.module.css";
 import React from "react";
 import CodeProcessor from "../CodeProcessor/CodeProcessor";
-import GraphX from "boxparade-graphx-react-temp";
+import GraphX from "boxparade-graphx-react";
 import SmallBxp from "../../Images/boxparade_logo39x39.png";
 import Footer from "../Footer/Footer";
 import Destruct2SVG from "../../SVGs/Destruct2SVG";
@@ -25,7 +25,7 @@ const GraphXDisplay: React.FC<{chart: number, title: string, chartWidth: string,
                 {!props.mode && <Destruct2SVG color={"#202020"}/>}
                 <div className={`gWidth`}>
                     <h2>Implementation</h2>
-                    <div><span/><img src={SmallBxp} alt="SMALL_BXP_LOGO"/><span/></div>
+                    <div><span/><img className="delayedBounce" src={SmallBxp} alt="SMALL_BXP_LOGO"/><span/></div>
                     {props.framework === 0 && <ul>
                         <li>First begin by downloading the project from node package manager(npm) <span className={_c.codeBlock}>npm i boxparade-graphx-javascript</span> into your project folder. You must have <a href="https://nodejs.org/en/" rel="noreferrer"  target="_blank">node</a> installed to use this package.</li>
                         <li>Secondly, extract the javascript file from the downloaded node package file into the assets directory of your project.</li>

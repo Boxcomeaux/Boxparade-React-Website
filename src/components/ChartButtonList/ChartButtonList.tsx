@@ -15,11 +15,8 @@ const ChartButtonList: React.FC<{listOfCharts: string[], sendIndex: (index: numb
 
     useEffect(() => {
         setActiveIndex(0);
-    },[props.typeClick]);
+    },[props.typeClick, props.typeIndex]);
 
-    useEffect(() => {
-            setActiveIndex(0);
-    },[props.typeIndex]);
 
     return <div className={`gWidth ${_c.chartToggleContainer} ${!props.mode ? _c["chartToggleContainer-Dark"] : ''}`}>
         {
@@ -27,7 +24,7 @@ const ChartButtonList: React.FC<{listOfCharts: string[], sendIndex: (index: numb
                 <ChartButton key={item} title={item} index={i} sendIndex={sendIndexHandler} typeIndex={props.typeIndex} activeIndex={activeIndex}/>
             ))
         }
-        <button type="button" className={_c.docBtn} onClick={glossaryHandler}><GlossarySVG/></button>
+        <button type="button" className={_c.docBtn} onClick={glossaryHandler} title="Glossary"><GlossarySVG/></button>
     </div>
 };
 

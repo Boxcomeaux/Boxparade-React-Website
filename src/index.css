@@ -34,3 +34,67 @@ a{
 a:hover{
   text-decoration: underline;
 }
+@keyframes delayedBounce{
+  0%{
+    transform:translate(0, 0) rotate(0deg);
+  }
+  10%{
+    transform:translate(0, 0) rotate(0deg);
+  }
+  11.25%{
+    transform:translate(0, -5px) rotate(0deg);
+  }
+  13.75%{
+    transform:translate(0, -5px) rotate(90deg);
+  }
+  14.25%{
+    transform:translate(0, 0) rotate(90deg);
+  }
+  25%{
+    transform:translate(0, 0)rotate(90deg);
+  }
+
+  26.25%{
+    transform:translate(0, -5px) rotate(90deg);
+  }
+  28.75%{
+    transform:translate(0, -5px) rotate(180deg);
+  }
+  29.25%{
+    transform:translate(0, 0) rotate(180deg);
+  }
+  58%{
+    transform:translate(0, 0)rotate(180deg);
+  }
+
+  68%{
+    transform:translate(0, -5px) rotate(180deg);
+  }
+  71%{
+    transform:translate(0, -5px) rotate(270deg);
+  }
+  74%{
+    transform:translate(0, 0) rotate(270deg);
+  }
+  84%{
+    transform:translate(0, 0)rotate(270deg);
+  }
+
+  86.25%{
+    transform:translate(0, -5px) rotate(270deg);
+  }
+  88.75%{
+    transform:translate(0, -5px) rotate(360deg);
+  }
+  90%{
+    transform:translate(0, 0) rotate(360deg);
+  }
+  100%{
+    transform:translate(0, 0)rotate(360deg);
+  }
+}
+
+/** ANIMATION CLASSES **/
+.delayedBounce{
+  animation:delayedBounce 20s ease 0ms infinite forwards;
+}
